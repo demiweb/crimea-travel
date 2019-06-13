@@ -1,0 +1,85 @@
+{%set
+form = [
+  { name: 'input', type: 'text', placeholder: 'ФИО', fieldClass: '' },
+  { name: 'input', type: 'tel', placeholder: 'Телефон', fieldClass: '' },
+  { name: 'input', type: 'text', placeholder: 'Количество мест', fieldClass: '' },
+  { name: 'select', type: '', placeholder: '', fieldClass: '',
+    options: [
+      { option: 'Маршрут', value: 'placeholder' }
+    ] 
+  },
+  { name: 'select', type: '', placeholder: '', fieldClass: '',
+    options: [
+      { option: 'Дата', value: 'placeholder' }
+    ] 
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--bg js-lazy" data-background-image="img/bg-form.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-7">
+        <div class="section__center-block">
+          <h2 class="title title--white">Уже решили, куда отправитесь?</h2>
+          <div class="text text--white">Звоните по телефонам ниже или оставьте заявку в форме.</div>
+
+          <!-- begin contacts -->
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item"><a href="tel:+380669996897" class="contacts__link phone">{{ mixins.icon('phone-call') }}(066) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone">{{ mixins.icon('phone-call') }}(063) 999 68 97</a></li>
+            </ul>
+
+            <ul class="contacts__list">
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 501 23 80</a></li>
+              <li class="contacts__item"><a href="tel:+79787218824" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 721 88 24</a></li>
+              <li class="contacts__item"><a href="tel:+380679996897" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}(067) 999 68 97</a></li>
+            </ul>
+          </div>
+          <!-- end contacts -->
+        </div>
+      </div>
+
+      <div class="col-5">
+        <!-- begin form -->
+        <div class="form">
+          <form>
+            <div class="form__title">
+              <h3 class="h3">Форма бронирования</h3>
+            </div>
+
+            <div class="form__subttl">Оставьте ваши данные ниже и мы свяжемся с вами в ближайшее время</div>
+
+            {% for i in form %}
+            <div class="form__field">
+              {{ mixins.input(
+                name = i.name,
+                mod = '',
+                type = i.mod,
+                placeholder = i.placeholder,
+                value = '',
+                fieldClass = i.filedClass,
+                options = i.options
+              ) }}
+            </div>
+            {% endfor %}
+
+            <div class="form__btn">
+              {{ mixins.btn(
+                title = 'Забронировать место',
+                mod = '',
+                href = false
+              ) }}
+            </div>
+
+            <div class="form__bottom-text">Ваши контактные данные не будут переданы третьим лицам</div>
+          </form>
+        </div>
+        <!-- end form -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

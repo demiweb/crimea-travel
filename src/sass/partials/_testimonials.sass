@@ -1,0 +1,37 @@
+.testimonials
+  border-top: 1px solid $gray
+  position: relative
+  +before
+    width: 33.33333%
+    height: 2px
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    top: -3px
+    background-color: #2daaf7
+.testimonial
+  background-color: $white
+  text-align: center
+  padding: 35px 20px 45px
+  border-radius: $radius
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1)
+  position: relative
+  &__img
+    border-radius: 50%
+    display: inline-block
+    +cover
+    width: 105px
+    height: 105px
+    margin-bottom: 15px
+    background-color: $gray
+  &__title
+    margin-bottom: 15px
+  &__info
+    position: absolute
+    text-align: left
+    z-index: 1
+    top: 20px
+    right: 20px
+    em
+      color: $c-heading
+      display: block

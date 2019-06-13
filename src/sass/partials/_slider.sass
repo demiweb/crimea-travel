@@ -1,0 +1,41 @@
+.slider
+  $this: &
+  &__wrap
+    position: relative
+    .slick-list
+      padding-top: 40px
+      padding-bottom: 40px
+      margin-left: -15px
+      margin-right: -15px
+    .slick-slide
+      margin-left: 15px
+      margin-right: 15px
+  &__prev,
+  &__next
+    position: absolute
+    background-color: transparent
+    top: 50%
+    transform: translate(0, -50%)
+    width: 90px
+    height: 20px
+    color: $c-heading
+    +before
+      width: 100%
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+      height: 1px
+      background-color: currentColor
+    +after
+      +icon-arrow(10, 10, 1, currentColor, -135)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%) rotate(-135deg)
+      right: 0
+
+  &__prev
+    left: calc(0px - 30px - 90px)
+    transform: translate(0, -50%) rotate(180deg)
+  &__next
+    right: calc(0px - 30px - 90px)

@@ -1,0 +1,67 @@
+{%set
+slider = [
+  {
+    info: '<em>Елена</em> Киев - Алушта',
+    title: 'Все супер!',
+    img: 'user-man.jpg',
+    text: 'Поездка прошла отлично! Хорошее транспортное средство, просторные кресла. Водитель аккуратный, пунктуальный и внимательный. Рекомендую!'
+  },
+  {
+    info: '<em>Владимир</em> Киев - Алушта',
+    title: 'Отличная поездка!',
+    img: 'user-fem.jpg',
+    text: 'Поездка прошла отлично! Хорошее транспортное средство, просторные кресла. Водитель аккуратный, пунктуальный и внимательный. Рекомендую!'
+  },
+  {
+    info: '<em>Елена</em> Киев - Алушта',
+    title: 'Все супер!',
+    img: 'user-man.jpg',
+    text: 'Поездка прошла отлично! Хорошее транспортное средство, просторные кресла. Водитель аккуратный, пунктуальный и внимательный. Рекомендую!'
+  },
+  {
+    info: '<em>Владимир</em> Киев - Алушта',
+    title: 'Отличная поездка!',
+    img: 'user-fem.jpg',
+    text: 'Поездка прошла отлично! Хорошее транспортное средство, просторные кресла. Водитель аккуратный, пунктуальный и внимательный. Рекомендую!'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section overflow-hidden">
+  <div class="container">
+    <div class="section__title">
+      <div class="h2 title">Наши довольные клиенты</div>
+    </div>
+
+    <!-- begin testimonials -->
+    <div class="testimonials">
+      <!-- begin slider -->
+      <div class="slider__wrap">
+        <div class="slider js-slider" data-slider="testimonials">
+          {% for i in slider %}
+          <!-- begin slide -->
+          <div class="slide testimonial">
+            <div class="testimonial__info">{{ i.info | safe }}</div>
+
+            <div class="testimonial__img js-lazy" data-background-image="img/{{ i.img }}"></div>
+
+            <div class="testimonial__title">
+              <h4 class="h4">{{ i.title }}</h4>
+            </div>
+
+            <div class="testimonial__text">{{ i.text }}</div>
+          </div>
+          <!-- end slide -->
+          {% endfor %}
+        </div>
+
+        <button class="slider__prev js-prev"></button>
+        <button class="slider__next js-next"></button>
+      </div>
+      <!-- end slider -->
+    </div>
+    <!-- end testimonials -->
+  </div>
+</section>
+<!-- end section -->
