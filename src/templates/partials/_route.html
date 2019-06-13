@@ -1,0 +1,49 @@
+{%set
+items = [
+  { mod: 'route-item--lg-vertical', img: 'route-1.jpg', title: 'Севастополь' },
+  { mod: '', img: 'route-2.jpg', title: 'ЯЛТА' },
+  { mod: '', img: 'route-3.jpg', title: 'ЕВПАТОРИЯ' },
+  { mod: 'route-item--lg-horisontal route-item--left-offset route-item--top-offset', img: 'route-4.jpg', title: 'БАХЧИСАРАЙ' },
+  { mod: '', img: 'route-1.jpg', title: 'Алушта' },
+  { mod: '', img: 'route-2.jpg', title: 'Судак' },
+  { mod: '', img: 'route-3.jpg', title: 'Феодосия' },
+  { mod: '', img: 'route-3.jpg', title: 'Джанкой' },
+  { mod: 'route-item--lg-horisontal', img: 'route-4.jpg', title: 'Керчь' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--routes js-lazy" data-background-image="img/bg-routes.jpg">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title">Куда хотите поехать?</h2>
+    </div>
+    <!-- begin routes -->
+    <div class="routes">
+      {% for i in items %}
+      <!-- begin route-item -->
+        <div class="route-item{% if i.mod %} {{ i.mod }}{% endif %}">
+          <div class="route-item__inner js-lazy" data-background-image="img/routes/{{ i.img }}">
+            <div class="route-item__block">
+              <div class="route-item__title">
+                <h4 class="h4 h4--white">{{ i.title }}</h4>
+              </div>
+
+              <div class="route-item__subttl">от 550 грн (1300 руб.)</div>
+
+              <div class="route-item__btn">
+                {{ mixins.btn(
+                  title = 'Смотреть график и цены',
+                  mod = 'btn--transp-white'
+                ) }}
+              </div>
+            </div>
+          </div>          
+        </div>
+      <!-- end route-item -->
+      {% endfor %}
+    </div>
+    <!-- end routes -->
+  </div>
+</section>
+<!-- end section -->

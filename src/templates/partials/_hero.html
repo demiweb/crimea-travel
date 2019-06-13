@@ -1,0 +1,56 @@
+{% set
+meta = [
+  { title: 'Кондиционеры', icon: 'snowflake' },
+  { title: 'Розетки', icon: 'electric' },
+  { title: 'TV Фильмы', icon: 'television' },
+  { title: 'WiFi 24/7', icon: 'wifi' }
+]
+%}
+
+<!-- begin hero -->
+<section class="hero js-lazy" data-background-image="img/bg-hero.jpg">
+  <div class="container">
+    {% include "partials/_header.html" %}
+
+    <div class="hero__block">
+      <div class="row">
+        <div class="col-5">
+          <div class="hero__left">
+            <div class="hero__title">
+              <h1 class="title title--white">Ежедневные рейсы Киев {{ mixins.icon('exchange') }} Крым от 500 грн (1300 р.)</h1>
+              <div class="subttl">Комфортабельные микроавтобусы</div>
+            </div>
+
+            <div class="hero__btn">
+              {{ mixins.btn(
+                title = 'Забронировать место',
+                mod = 'js-scroll-to-btn'
+              ) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 offset-1">
+          <div class="hero__meta">
+            <!-- begin meta -->
+            <div class="meta">
+              {% for i in meta %}
+              <!-- begin meta-item -->
+              <div class="meta-item">
+                <div class="meta-item__icon">{{ mixins.icon(i.icon) }}</div>
+
+                <div class="meta-item__title">{{ i.title }}</div>
+              </div>
+              <!-- end meta-item -->
+              {% endfor %}
+            </div>
+            <!-- end meta -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__img js-lazy" data-background-image="img/bus.png"></div>
+</section>
+<!-- end hero -->

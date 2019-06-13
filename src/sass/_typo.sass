@@ -11,13 +11,39 @@ em, i
 h1, h2, h3, h4, h5, h6
   font-weight: 400
 
+.title
+  +css-lock(28, 55, 320, 1199, font-size)
+  +bold
+  color: $c-heading
+  line-height: 1
+  .icon
+    vertical-align: middle
+    line-height: 1.2
+    +css-lock(16, 28, 320, 1199, font-size)
+  &--white
+    color: $white
+
+.subttl
+  +css-lock(18, 24, 320, 1199, font-size)
+  color: $white
+
 .h1, h1
+  @extend .title
 
 .h2, h2
 
 .h3, h3
 
 .h4, h4
+  +bold
+  color: $c-heading
+  text-transform: uppercase
+  line-height: 1.2
+  +css-lock(18, 24, 320, 1199, font-size)
+  &--ttn
+    text-transform: none
+  &--white
+    color: $white
 
 .h5, h5
 

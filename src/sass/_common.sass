@@ -15,3 +15,42 @@ input, textarea
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.logo
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: #cef2fe
+  &__img
+    margin-right: 20px
+  &__subttl
+    display: block
+  &__title
+    color: $white
+    display: block
+    font-size: $fz-lg
+    em
+      color: $accent
+
+.btn
+  display: inline-block
+  background-color: $accent
+  border: 1px solid  $accent
+  text-align: center
+  color: #5d5d59
+  +bold
+  padding: 13px 20px
+  border-radius: 30px
+  +tr(color .3s, background-color .3s, border-color .3s)
+  +hover
+    background-color: transparent
+    color: $accent
+
+  &--transp-white
+    color: $white
+    border-color: $white
+    background-color: transparent
+    +hover
+      background-color: $white
+      border-color: $white
+      color: #5d5d59

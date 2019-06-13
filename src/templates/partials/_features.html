@@ -1,0 +1,37 @@
+{%set
+features = [
+  { icon: 'customer', nmb: '1000', title: 'Более 1000 довольных клиентов' },
+  { icon: 'snowflake', nmb: '26', title: 'В наших автобусах всегда 26 °C' },
+  { icon: 'driver', nmb: '12', title: 'Опытные водители со стажем более 12 лет' },
+  { icon: 'bus', nmb: '58', title: 'Комфортный транспорт в нашем автопарке' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title">Почему нам стоит доверять</h2>
+    </div>
+    <!-- begin features -->
+    <div class="features">
+      <div class="row">
+        {% for i in features %}
+        <div class="col-3">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__icon">{{ mixins.icon(i.icon) }}</div>
+
+            <div class="feature__nmb">{{ i.nmb }}</div>
+
+            <div class="feature__title">{{ i.title }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+</section>
+<!-- end section -->

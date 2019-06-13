@@ -1,0 +1,21 @@
+.nav
+  color: $white
+  height: 100%
+  ul
+    height: 100%
+  li
+    display: inline-block
+    height: 100%
+    +notlast
+      margin-right: 45px
+  a
+    display: flex
+    align-items: center
+    height: 100%
+    +tr(color .3s)
+    &.is-active
+      color: $accent
+      border-bottom: 2px solid  $accent
+    +hover
+      color: $accent
+      border-bottom: 2px solid  $accent

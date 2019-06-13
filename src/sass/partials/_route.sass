@@ -1,0 +1,47 @@
+.routes
+  
+  @extend .row
+
+.route-item
+  $this: &
+  // padding-top: 100%
+  @extend .col-4
+  margin-bottom: 15px
+  &__inner
+    position: relative
+    +cover
+    color: $white
+    // height: 100%
+    padding-top: 100%
+    border-radius: 20px
+    +before
+      border-radius: 20px
+      +coverdiv
+      z-index: 0
+      background-image: linear-gradient( 48deg, rgb(30,94,144) 0%, rgba(255,255,255,0) 100%)
+  &__block
+    position: absolute
+    bottom: 25px
+    left: 25px
+    z-index: 1
+  &__title
+    margin-bottom: 12px
+  &__subttl
+    margin-bottom: 15px
+
+  &--lg-vertical
+    #{$this}__inner
+      padding-top: 200%
+
+  &--lg-horisontal
+    @extend .col-8 
+    
+    #{$this}__inner
+      padding-top: 48%
+    &.route-item--top-offset
+      #{$this}__inner
+        padding-top: 46%
+  &--top-offset
+    margin-top: -30.8%
+  &--left-offset
+    @extend .offset-4

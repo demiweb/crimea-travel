@@ -1,0 +1,52 @@
+.hero
+  +cover
+  // min-height: 100vh
+  position: relative
+  // margin-bottom: 50px
+  &__img
+    position: absolute
+    +cover
+    background-size: contain
+    z-index: 0
+    right: 0
+    bottom: -50px
+    width: percentage(700/1920)
+    height: percentage(325/885)
+  &__block
+    position: relative
+    z-index: 1
+    padding-top: 12%
+    padding-bottom: 12%
+  &__title
+    margin-bottom: 35px
+    h1, .title
+      margin-bottom: 10px
+  &__left
+    padding-top: 35px
+
+
+.meta
+ +flex(flex-start, center, row, wrap)
+
+.meta-item
+  +flex(flex-start, center)
+  color: $white
+  width: 50%
+  margin-bottom: 30px
+  
+  &__icon
+    margin-right: 14px
+    background-color: rgba(#adb9d1, .4)
+    border-radius: 50%
+    height: 130px
+    width: 130px
+    padding: 24px
+    +flex(center, center)
+    border: 12px solid rgba(#6c87b7, .4)
+    position: relative
+    +before
+      border: 12px solid rgba(#8998b7, .4)
+      border-radius: 50%
+      +coverdiv
+    .icon
+      font-size: 42px

@@ -1,0 +1,31 @@
+.header
+  &__logo
+    +flex(flex-start, center)
+    padding-top: 10px
+    padding-bottom: 10px
+  &__top
+    border-bottom: 1px solid  #b5d0ff
+    +flex(space-between)
+  &__nav
+    flex-grow: 1
+    height: auto
+    text-align: right
+    padding-right: 20px
+    +flex(flex-end, center)
+  &__btn
+    +flex(flex-start, center)
+  &__bottom
+    padding-top: 20px
+
+.phones
+  +flex(space-between, center)
+
+.phone
+  +flex(flex-start, center)
+  color: $white
+  +bold
+  +tr(color .3s)
+  +hover
+    color: $accent
+  .icon
+    margin-right: 5px

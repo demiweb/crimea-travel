@@ -1,0 +1,21 @@
+.features
+
+.feature
+  text-align: center
+  &__icon
+    border-radius: 50%
+    height: 110px
+    width: 110px
+    background-color: $white
+    +flex(center, center)
+    color: $c-text-hover
+    box-shadow: 0px 3px 9px 0px rgba(186, 237, 253, 0.53)
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 20px
+    .icon
+      font-size: 55px
+  &__nmb
+    @extend .title
+    text-transform: uppercase
+    margin-bottom: 20px
