@@ -8,8 +8,12 @@ body
 
 input, textarea
   font-family: inherit
+  font-size: inherit
+  color: inherit
   +placeholder
     font-family: inherit
+    font-size: inherit
+    color: inherit
 
 .icon
   display: inline-block
@@ -39,6 +43,7 @@ input, textarea
   display: inline-block
   background-color: $accent
   border: 1px solid  $accent
+  font-size: $fz
   text-align: center
   color: #5d5d59
   +bold
@@ -56,4 +61,12 @@ input, textarea
     +hover
       background-color: $white
       border-color: $white
+      color: #5d5d59
+  &--transp-text
+    color: $c-text
+    border-color: $c-text
+    background-color: transparent
+    +hover
+      background-color: $c-text
+      border-color: $c-text
       color: #5d5d59

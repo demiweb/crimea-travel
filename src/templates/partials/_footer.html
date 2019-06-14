@@ -1,0 +1,108 @@
+<!-- begin footer -->
+<footer class="footer js-lazy" data-background-image="img/bg-footer.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Полезные ссылки</h4>
+        </div>
+
+        <div class="footer__nav">
+          {{ mixins.list(
+            name = 'nav nav--footer',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link: 'Главная' },
+              { link: 'Маршруты и тарифы' },
+              { link: 'Преимущества' },
+              { link: 'Вопросы и ответы' },
+              { link: 'Контакты' }
+            ]
+          ) }}
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Направления</h4>
+        </div>
+
+        {{ mixins.list(
+          name = 'nav nav--footer',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link: 'Киев - Ялта' },
+            { link: 'Киев - Евпатория' },
+            { link: 'Киев - Симферополь' },
+            { link: 'Киев - Керчь' },
+            { link: 'Киев - Алушта' },
+            { link: 'Киев - Севастополь' },
+            { link: 'Киев - Судак' },
+            { link: 'Киев - Феодосия' },
+            { link: 'Киев - Бахчисарай' },
+            { link: 'Киев - Джанкой' }
+          ]
+        ) }}
+      </div>
+
+      <div class="col-3">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Полезные ссылки</h4>
+        </div>
+
+        {{ mixins.list(
+          name = 'nav nav--footer',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link: 'Киев - Ялта' },
+            { link: 'Киев - Евпатория' },
+            { link: 'Киев - Симферополь' },
+            { link: 'Киев - Керчь' },
+            { link: 'Киев - Алушта' },
+            { link: 'Киев - Севастополь' },
+            { link: 'Киев - Судак' },
+            { link: 'Киев - Феодосия' },
+            { link: 'Киев - Бахчисарай' },
+            { link: 'Киев - Джанкой' }
+          ]
+        ) }}
+      </div>
+
+      <div class="col-3">
+        <div class="footer__title">
+          <h4 class="h4 h4--white">Контакты</h4>
+        </div>
+
+        <div class="footer__contacts">
+          <!-- begin contacts -->
+          <div class="contacts contacts--sm">
+            <ul class="contacts__list">
+              <li class="contacts__item"><a href="tel:+380669996897" class="contacts__link phone phone--sm"><span class="phone__icon">{{ mixins.icon('phone-call') }}</span>(066) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone phone--sm"><span class="phone__icon">{{ mixins.icon('phone-call') }}</span>(063) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone phone--sm"><span class="phone__icon">{{ mixins.icon('whatsapp') }} {{ mixins.icon('viber-logo') }}</span>+7978 501 23 80</a></li>
+              <li class="contacts__item"><a href="tel:+79787218824" class="contacts__link phone phone--sm"><span class="phone__icon">{{ mixins.icon('whatsapp') }} {{ mixins.icon('viber-logo') }}</span>+7978 721 88 24</a></li>
+              <li class="contacts__item"><a href="tel:+380679996897" class="contacts__link phone phone--sm"><span class="phone__icon">{{ mixins.icon('whatsapp') }} {{ mixins.icon('viber-logo') }}</span>(067) 999 68 97</a></li>
+            </ul>
+          </div>
+          <!-- end contacts -->
+        </div>
+
+        <div class="footer__btn">
+          {{ mixins.btn(
+            title = 'Забронировать место',
+            mod = 'btn--transp-text'
+          ) }}
+        </div>       
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__logo">
+        {% include "partials/_logo.html" %}
+      </div>
+
+      <div class="footer__copy">Copyright 2019 "Крым Travel". <a href="#">Создание и поддержка сайта "Demiweb International"</a></div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

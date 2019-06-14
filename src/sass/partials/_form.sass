@@ -1,0 +1,115 @@
+.form
+  background-color: $white
+  border-radius: $radius
+  padding: 70px 30px 30px
+  &__title
+    text-align: center
+    margin-bottom: 12px
+    position: relative
+    padding-bottom: 12px
+    +before
+      border-bottom: 3px solid $c-heading
+      width: 60px
+      left: 50%
+      position: absolute
+      transform: translate(-50%, 0)
+      bottom: 0
+  &__subttl
+    max-width: 300px
+    margin-bottom: 35px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    color: $c-heading
+  &__field
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 35px
+  &__btn
+    text-align: center
+    margin-bottom: 25px
+  &__bottom-text
+    +light
+    font-size: $fz-md
+    max-width: 250px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+.input
+  color: $c-text
+  font-size: $fz
+  input
+    width: 100%
+    padding: 5px
+    height: 33px
+    border-bottom: 1px solid currentColor
+    background-color: transparent
+    +light
+
+.custom-select
+  $this: &
+  +light
+  position: relative
+  select
+    position: absolute
+    visibility: hidden
+    opacity: 0
+  &.is-open
+    #{$this}__panel
+      +tr(opacity .3s, visibility .3s, transform .3s)
+      visibility: visible
+      opacity: 1
+      transform: translate(0, 0)
+  &__opener
+    height: 33px
+    position: relative
+    padding: 5px
+    border-bottom: 1px solid currentColor
+    background-color: $white
+    cursor: pointer
+    +before
+      +icon-arrow(8, 8, 1, $c-heading, -45)
+      display: inline-block
+      position: absolute
+      pointer-events: none
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      right: 0
+  &__panel
+    position: absolute
+    visibility: hidden
+    transform: translate(0, -20px)
+    opacity: 0
+    top: 100%
+    left: 0
+    width: 100%
+    background-color: $white
+    border: 1px solid  $c-text
+    
+  &__panel-item
+    padding-left: 5px
+    padding-right: 5px
+    position: relative
+    input
+      width: 100%
+      border-bottom: 1px solid currentColor
+      padding: 5px
+      padding-right: 30px
+    .icon
+      position: absolute
+      right: 5px
+      top: 50%
+      transform: translate(0, -50%)
+  &__options
+    max-height: 300px
+    overflow: auto
+  &__option
+    padding: 5px
+    cursor: pointer
+    +tr(color .3s)
+    +hover
+      color: $c-text-hover
+    &[data-value="placeholder"]
+      display: none
+

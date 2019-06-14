@@ -2,18 +2,24 @@
 form = [
   { name: 'input', type: 'text', placeholder: 'ФИО', fieldClass: '' },
   { name: 'input', type: 'tel', placeholder: 'Телефон', fieldClass: '' },
-  { name: 'input', type: 'text', placeholder: 'Количество мест', fieldClass: '' },
-  { name: 'select', type: '', placeholder: '', fieldClass: '',
+  { name: 'input', type: 'text', placeholder: 'Количество мест' },
+  { name: 'select',
+    type: 'default',
+    placeholder: '',
+    fieldClass: 'js-select',
     options: [
-      { option: 'Маршрут', value: 'placeholder' }
+      { option: 'Маршрут', value: 'placeholder' },
+      { option: 'Маршрут1', value: '1' },
+      { option: 'Маршрут2', value: '2' },
+      { option: 'Маршрут3', value: '3' }
     ] 
   },
-  { name: 'input', type: 'text', placeholder: 'Дата', fieldClass: 'js-date-input' }
+  { name: 'input', type: 'text', placeholder: 'Дата', fieldClass: 'js-date-input', fieldAttributes: { 'data-type': 'date' } }
 ]
 %}
 
 <!-- begin section -->
-<section class="section section--bg js-lazy" data-background-image="img/bg-form.jpg">
+<section class="section section--bg section--lg js-lazy" data-background-image="img/bg-form.jpg">
   <div class="container">
     <div class="row">
       <div class="col-7">
@@ -24,14 +30,14 @@ form = [
           <!-- begin contacts -->
           <div class="contacts">
             <ul class="contacts__list">
-              <li class="contacts__item"><a href="tel:+380669996897" class="contacts__link phone">{{ mixins.icon('phone-call') }}(066) 999 68 97</a></li>
-              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone">{{ mixins.icon('phone-call') }}(063) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+380669996897" class="contacts__link phone phone--lg">{{ mixins.icon('phone-call') }}(066) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone phone--lg">{{ mixins.icon('phone-call') }}(063) 999 68 97</a></li>
             </ul>
 
             <ul class="contacts__list">
-              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 501 23 80</a></li>
-              <li class="contacts__item"><a href="tel:+79787218824" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 721 88 24</a></li>
-              <li class="contacts__item"><a href="tel:+380679996897" class="contacts__link phone">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}(067) 999 68 97</a></li>
+              <li class="contacts__item"><a href="tel:+79785012380" class="contacts__link phone phone--lg">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 501 23 80</a></li>
+              <li class="contacts__item"><a href="tel:+79787218824" class="contacts__link phone phone--lg">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 721 88 24</a></li>
+              <li class="contacts__item"><a href="tel:+380679996897" class="contacts__link phone phone--lg">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}(067) 999 68 97</a></li>
             </ul>
           </div>
           <!-- end contacts -->
@@ -53,11 +59,12 @@ form = [
               {{ mixins.input(
                 name = i.name,
                 mod = '',
-                type = i.mod,
+                type = i.type,
                 placeholder = i.placeholder,
                 value = '',
-                fieldClass = i.filedClass,
-                options = i.options
+                fieldClass = i.fieldClass,
+                options = i.options,
+                fieldAttributes = i.fieldAttributes
               ) }}
             </div>
             {% endfor %}
@@ -70,7 +77,7 @@ form = [
               ) }}
             </div>
 
-            <div class="form__bottom-text">Ваши контактные данные не будут переданы третьим лицам</div>
+            <div class="form__bottom-text">{{ mixins.icon('lock') }} Ваши контактные данные не будут переданы третьим лицам</div>
           </form>
         </div>
         <!-- end form -->
