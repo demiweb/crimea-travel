@@ -1,0 +1,114 @@
+{%set
+table = [
+  {
+    cols: [
+      { text: '8:00' },
+      { text: 'м.Теремки' },
+      { text: 'Пересадка' },
+      { text: 'Mersedes Sprinter' },
+      { text: '1000 грн' }
+    ]
+  },
+  {
+    cols: [
+      { text: '8:00' },
+      { text: 'м.Теремки' },
+      { text: 'Пересадка' },
+      { text: 'Mersedes Sprinter' },
+      { text: '1000 грн' }
+    ]
+  },
+  {
+    cols: [
+      { text: '8:00' },
+      { text: 'м.Теремки' },
+      { text: 'Пересадка' },
+      { text: 'Mersedes Sprinter' },
+      { text: '1000 грн' }
+    ]
+  },
+  {
+    cols: [
+      { text: '8:00' },
+      { text: 'м.Теремки' },
+      { text: 'Пересадка' },
+      { text: 'Mersedes Sprinter' },
+      { text: '1000 грн' }
+    ]
+  },
+  {
+    cols: [
+      { text: '8:00' },
+      { text: 'м.Теремки' },
+      { text: 'Пересадка' },
+      { text: 'Mersedes Sprinter' },
+      { text: '1000 грн' }
+    ]
+  }
+]
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="schedule">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+
+      {% for i in range(0, 2) %}
+      <div class="popup__table">
+        
+      
+      <table>
+        <tr>
+          <td colspan="6">
+            <h2 class="title">Киев {{ mixins.icon('arrow-long') }} Алушта</h2>
+          </td>
+        </tr>
+
+        {% for j in table %}
+        <tr>
+          {% for k in j.cols %}
+          <td>{{ k.text }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+
+        <tr>
+          <td colspan="6">
+            <div class="h4 h4--ttn h4--white">Трансфер от дома 24/7 от 500 грн</div>
+          </td>
+        </tr>
+      </table>
+      </div>
+      {% endfor %}
+      
+
+    <div class="popup__contacts">
+      <!-- begin popup-contacts -->
+      <div class="popup-contacts">
+        <div class="popup-contacts__left">
+          <div class="popup-contacts__title">
+            <h4 class="h4 h4--ttn">Бронь по телефонам:</h4>
+          </div>
+        </div>
+
+        <div class="popup-contacts__middle">
+          <a href="tel:+380669996897" class="phone phone--blue">{{ mixins.icon('phone-call') }}(066) 999 68 97</a>
+          <a href="tel:+38063999 68 97" class="phone phone--blue">{{ mixins.icon('phone-call') }}(063) 999 68 97</a>
+
+           <a href="tel:+79787218824" class="phone phone--blue">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 721 88 24</a>
+          <a href="tel:+380679996897" class="phone phone--blue">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}(067) 999 68 97</a>
+        </div>
+
+        <div class="popup-contacts__right">
+          <a href="tel:+79785012380" class="phone phone--blue">{{ mixins.icon('phone') }} {{ mixins.icon('viber') }}+7978 501 23 80</a>
+          {{ mixins.btn(
+            title = 'Забронировать место',
+            mod = 'btn--transp-heading'
+          ) }}
+        </div>
+      </div>
+      <!-- end popup-contacts -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

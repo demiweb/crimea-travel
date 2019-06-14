@@ -6,9 +6,11 @@
   border-radius: $radius
   box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.07)
   margin-bottom: 30px
+  +sm
+    margin-bottom: 15px
 
   &__wrap
-    @extend .col-6
+    @extend .col-md-6
     &:nth-child(4)
       .question__text
         display: block
@@ -25,9 +27,21 @@
       top: 50%
       transform: translate(0, -50%) rotate(-45deg)
       right: 45px
+    +lg
+      padding: 25px
+      padding-right: 40px
+      +before
+        right: 25px
+    +md
+      padding: 20px
+      padding-right: 35px
+      +before
+        right: 20px
     .icon
       font-size: 30px
       margin-right: 12px
+  &__icon
+    display: inline-block
   &__text
     padding-left: 45px
     padding-right: 45px
@@ -36,7 +50,17 @@
     max-height: 0
     overflow: hidden
     padding-bottom: 0
+    +lg
+      padding-left: 25px
+      padding-right: 25px
+    +md
+      padding-left: 20px
+      padding-right: 20px
     &.is-active
       max-height: none
       overflow: visible
       padding-bottom: 45px
+      +lg
+        padding-bottom: 25px
+      +md
+        padding-bottom: 20px

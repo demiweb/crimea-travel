@@ -2,7 +2,7 @@
 <footer class="footer js-lazy" data-background-image="img/bg-footer.jpg">
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-4">
         <div class="footer__title">
           <h4 class="h4 h4--white">Полезные ссылки</h4>
         </div>
@@ -23,53 +23,57 @@
         </div>
       </div>
 
-      <div class="col-2">
+      <div class="col-lg-2 col-md-4 col-sm-6 col-6">
         <div class="footer__title">
           <h4 class="h4 h4--white">Направления</h4>
         </div>
 
-        {{ mixins.list(
-          name = 'nav nav--footer',
-          modifications = { wrap: '', item: '', link: '' },
-          list = [
-            { link: 'Киев - Ялта' },
-            { link: 'Киев - Евпатория' },
-            { link: 'Киев - Симферополь' },
-            { link: 'Киев - Керчь' },
-            { link: 'Киев - Алушта' },
-            { link: 'Киев - Севастополь' },
-            { link: 'Киев - Судак' },
-            { link: 'Киев - Феодосия' },
-            { link: 'Киев - Бахчисарай' },
-            { link: 'Киев - Джанкой' }
-          ]
-        ) }}
+        <div class="footer__nav">
+          {{ mixins.list(
+            name = 'nav nav--footer',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link: 'Киев - Ялта', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Евпатория', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Симферополь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Керчь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Алушта', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Севастополь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Судак', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Феодосия', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Бахчисарай', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Джанкой', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } }
+            ]
+          ) }}
+        </div>
       </div>
 
-      <div class="col-3">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
         <div class="footer__title">
           <h4 class="h4 h4--white">Полезные ссылки</h4>
         </div>
-
-        {{ mixins.list(
-          name = 'nav nav--footer',
-          modifications = { wrap: '', item: '', link: '' },
-          list = [
-            { link: 'Киев - Ялта' },
-            { link: 'Киев - Евпатория' },
-            { link: 'Киев - Симферополь' },
-            { link: 'Киев - Керчь' },
-            { link: 'Киев - Алушта' },
-            { link: 'Киев - Севастополь' },
-            { link: 'Киев - Судак' },
-            { link: 'Киев - Феодосия' },
-            { link: 'Киев - Бахчисарай' },
-            { link: 'Киев - Джанкой' }
-          ]
-        ) }}
+        
+        <div class="footer__nav">
+          {{ mixins.list(
+            name = 'nav nav--footer',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link: 'Киев - Ялта', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Евпатория', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Симферополь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Керчь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Алушта', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Севастополь', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Судак', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Феодосия', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Бахчисарай', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } },
+              { link: 'Киев - Джанкой', modLink: 'js-popup-open', attributes: { 'data-popup-target': 'schedule' } }
+            ]
+          ) }}
+      </div>
       </div>
 
-      <div class="col-3">
+      <div class="col-lg-3 col-md-4">
         <div class="footer__title">
           <h4 class="h4 h4--white">Контакты</h4>
         </div>

@@ -16,7 +16,15 @@ export default function setSliders() {
       testimonials: {
         slidesToShow: 2,
         prevArrow: $prev,
-        nextArrow: $next
+        nextArrow: $next,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       }
     };
 

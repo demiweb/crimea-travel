@@ -33,9 +33,29 @@
       top: 50%
       transform: translate(0, -50%) rotate(-135deg)
       right: 0
+    +r(1359)
+      height: 40px
+      width: 40px
+      border-radius: 10px
+      background-color: rgba($black, .3)
+      +before
+        width: 70%
+        left: 6px
+      +after
+        right: 6px
+    
 
   &__prev
     left: calc(0px - 30px - 90px)
     transform: translate(0, -50%) rotate(180deg)
+    +xxl
+      left: calc(0px - 90px)
+    +r(1359)
+      left: 0
+      
   &__next
     right: calc(0px - 30px - 90px)
+    +xxl
+      right: calc(0px - 90px)
+    +r(1359)
+      right: 0

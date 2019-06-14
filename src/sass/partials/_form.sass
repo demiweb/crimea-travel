@@ -2,6 +2,12 @@
   background-color: $white
   border-radius: $radius
   padding: 70px 30px 30px
+  +md
+    padding: 50px 20px 20px
+  +sm
+    padding: 30px 20px 20px
+  +xs
+    padding: 15px
   &__title
     text-align: center
     margin-bottom: 12px
@@ -21,13 +27,38 @@
     margin-right: auto
     text-align: center
     color: $c-heading
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
   &__field
     margin-bottom: 25px
-    &:last-child
-      margin-bottom: 35px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
+    // &:last-child
+    //   margin-bottom: 35px
+    //   +md
+    //     margin-bottom: 25px
+    //   +sm
+    //     margin-bottom: 20px
+    //   +xs
+    //     margin-bottom: 15px
   &__btn
+    padding-top: 10px
     text-align: center
     margin-bottom: 25px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
   &__bottom-text
     +light
     font-size: $fz-md
@@ -39,6 +70,8 @@
 .input
   color: $c-text
   font-size: $fz
+  +sm
+    font-size: $fz-md
   input
     width: 100%
     padding: 5px

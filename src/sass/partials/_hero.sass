@@ -12,6 +12,8 @@
     bottom: -50px
     width: percentage(700/1920)
     height: percentage(325/885)
+    +md
+      display: none
   &__block
     position: relative
     z-index: 1
@@ -21,8 +23,14 @@
     margin-bottom: 35px
     h1, .title
       margin-bottom: 10px
+    +md
+      margin-bottom: 15px
   &__left
     padding-top: 35px
+    +md
+      margin-bottom: 15px
+  &__meta
+
 
 
 .meta
@@ -33,6 +41,9 @@
   color: $white
   width: 50%
   margin-bottom: 30px
+  +xs
+    display: block
+    text-align: center
   
   &__icon
     margin-right: 14px
@@ -48,5 +59,21 @@
       border: 12px solid rgba(#8998b7, .4)
       border-radius: 50%
       +coverdiv
+    +lg
+      width: 100px
+      height: 100px
+      margin-right: 5px
+      .icon
+        font-size: 25px
+    +md
+      width: 80px
+      height: 80px
+      border-width: 8px
+      +before
+        border-width: 8px
+    +xs
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 10px
     .icon
       font-size: 42px

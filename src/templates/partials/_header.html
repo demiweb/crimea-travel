@@ -5,20 +5,20 @@
       {% include "partials/_logo.html" %}
     </div>
 
-    <div class="header__nav">
+    <div class="header__nav js-menu" data-menu="main_menu">
       {{ mixins.list(
         name = 'nav',
         modifications = { wrap: '', item: '', link: '' },
         list = [
           { href: 'routes', link: 'Маршруты и тарифы', modItem: '', modLink: 'js-scroll-to-btn' },
-          { href: 'features', link: 'Преимущества', modItem: '', modLink: 'is-active js-scroll-to-btn' },
+          { href: 'features', link: 'Преимущества', modItem: '', modLink: 'js-scroll-to-btn' },
           { href: 'testimonials', link: 'Отзывы', modItem: '', modLink: 'js-scroll-to-btn' },
           { href: 'faq', link: 'Вопросы и ответы', modItem: '', modLink: 'js-scroll-to-btn' }
         ]
       ) }}
     </div>
 
-    <div class="header__contacts">
+    <div class="header__contacts js-menu" data-menu="contacts">
       <!-- begin contacts -->
           <div class="contacts contacts--sm contacts--header">
             <div class="contacts__title">Бронь по телефонам:</div>
@@ -37,12 +37,22 @@
           <!-- end contacts -->
     </div>
 
+    
+
     <div class="header__btn">
       {{ mixins.btn(
         title = 'Забронировать место',
         mod = 'js-scroll-to-btn',
         href = 'form'
       ) }}
+    </div>
+
+    <div class="header__burger-contacts">
+      <a href="#" class="burger burger--contacts js-burger" data-menu-target="contacts">{{ mixins.icon('phone-call') }}</a>
+    </div>
+
+    <div class="header__burger">
+      <a href="#" class="burger js-burger" data-menu-target="main_menu"><span></span></a>
     </div>
   </div>
 

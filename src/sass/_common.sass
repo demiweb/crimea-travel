@@ -5,6 +5,8 @@ body
   +reg
   color: $c-text
   +no-scroll
+  +sm
+    font-size: $fz-md
 
 input, textarea
   font-family: inherit
@@ -31,6 +33,17 @@ input, textarea
   z-index: 10
   &__btn
     margin-bottom: 10px
+    +xxl
+      .btn--soc
+        font-size: 0
+        min-width: 0
+        padding: 0
+        height: 40px
+        width: 40px
+        border-radius: 50%
+        .icon
+          font-size: $fz
+          margin: 0
 
 .logo
   display: flex
@@ -39,12 +52,18 @@ input, textarea
   color: #cef2fe
   &__img
     margin-right: 20px
+    +xs
+      margin-right: 0
+      img
+        max-width: 80%
   &__subttl
     display: block
   &__title
     color: $white
     display: block
     font-size: $fz-lg
+    +xs
+      font-size: $fz
     em
       color: $accent
 
@@ -63,6 +82,11 @@ input, textarea
   +hover
     background-color: transparent
     color: $accent
+  +sm
+    padding: 8px 15px
+  +xs
+    min-width: 0
+    width: 100%
 
   &--transp-white
     color: $white
@@ -80,6 +104,14 @@ input, textarea
       background-color: $c-text
       border-color: $c-text
       color: #5d5d59
+  &--transp-heading
+    color: $c-heading
+    border-color: $c-heading
+    background-color: transparent
+    +hover
+      background-color: $c-heading
+      border-color: $c-heading
+      color: #5d5d59
   &--viber
     background-color: #8a51a2
     border-color: #8a51a2
@@ -95,3 +127,30 @@ input, textarea
       border-color: $accent
     .icon
       margin-right: 5px
+
+table
+  +sm
+    width: 720px
+  tr
+    background-color: $white
+    &:nth-child(even)
+      background-color: #f6f8ff
+    &:first-child
+      td
+        padding-top: 40px
+        padding-bottom: 40px
+        +md
+          padding-top: 30px
+          padding-bottom: 30px
+    &:last-child
+      background-color: $c-heading
+      td
+        padding-top: 30px
+        padding-bottom: 30px
+        +md
+          padding-top: 20px
+          padding-bottom: 20px
+  td
+    padding-top: 10px
+    padding-bottom: 10px
+

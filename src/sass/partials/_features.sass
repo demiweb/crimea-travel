@@ -5,6 +5,8 @@
   max-width: 195px
   margin-left: auto
   margin-right: auto
+  +md
+    margin-bottom: 30px
   &__icon
     border-radius: 50%
     height: 110px
@@ -16,9 +18,17 @@
     margin-left: auto
     margin-right: auto
     margin-bottom: 20px
+    +sm
+      width: 90px
+      height: 90px
+      margin-bottom: 10px
+      .icon
+        font-size: 45px
     .icon
       font-size: 55px
   &__nmb
     @extend .title
     text-transform: uppercase
     margin-bottom: 20px
+    +sm
+      margin-bottom: 10px

@@ -8,6 +8,8 @@ import setAccordion from './components/setAccordion';
 import setGrid from './components/setGrid';
 import scrollTo from './components/scrollTo';
 import toggleHeaderOnScroll from './components/toggleHeaderOnScroll';
+import setPopup from './components/setPopup';
+import toggleMenu from './components/toggleMenu';
 
 $(function() {
   // sayHello();
@@ -20,4 +22,6 @@ $(function() {
   setGrid();
   scrollTo();
   toggleHeaderOnScroll();
+  setPopup();
+  toggleMenu();
 });

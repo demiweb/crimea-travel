@@ -2,18 +2,45 @@
   padding-top: 60px
   padding-bottom: 60px
   background-color: $white
+  +md
+    padding-top: 40px
+    padding-bottom: 40px
+  +sm
+    padding-top: 30px
+    padding-bottom: 30px
+  +xs
+    padding-top: 20px
+    padding-bottom: 20px
   &__title
     text-align: center
     margin-bottom: 80px
     .title, h2
       margin-bottom: 20px
+    +md
+      margin-bottom: 60px
+    +sm
+      margin-bottom: 40px
+    +xs
+      margin-bottom: 20px
   &__center-block
     height: 100%
     +flex(center, normal, column)
+    +md
+      margin-bottom: 20px
+    +xs
+      text-align: center
     .title, h2
       margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
     .text
       margin-bottom: 60px
+      +lg
+        margin-bottom: 40px
+      +md
+        margin-bottom: 30px
+      +sm
+        margin-bottom: 20px
 
   &--routes
     +cover

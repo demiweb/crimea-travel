@@ -3,13 +3,58 @@
   padding-bottom: 40px
   background-color: $c-heading
   +cover
+  +md
+    padding-top: 40px
+  +sm
+    padding-top: 30px
+    padding-bottom: 30px
+  +xs
+    padding-top: 20px
+    padding-bottom: 20px
   &__title
     margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
   &__bottom
     padding-top: 45px
     +flex(space-between, center)
+    +lg
+      padding-top: 35px
+    +md
+      padding-top: 25px
+    +sm
+      padding-top: 20px
+      display: block
+    +xs
+      padding-top: 15px
   &__copy
     a
       text-decoration: underline
+    +sm
+      
   &__contacts
     margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
+  &__nav
+    +lg
+      margin-bottom: 20px
+  &__logo
+    min-width: 280px
+    padding-right: 20px
+    +sm
+      min-width: 0
+      display: inline-block
+      

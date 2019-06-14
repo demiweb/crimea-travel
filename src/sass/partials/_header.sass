@@ -1,46 +1,100 @@
 .header
   $this: &
+  position: relative
+  z-index: 2
   &.is-fixed
     position: fixed
     z-index: 10
     left: 0
     right: 0
     top: 0
-    background-color: $c-heading
-    height: 118px
+    background-color: $c-heading    
+    +sm
     #{$this}__top
       @extend .container
       border-bottom: 0
-      padding-top: 15px
-      padding-bottom: 15px
+      height: 118px
+      // padding-top: 15px
+      // padding-bottom: 15px
+      +lg
+        position: static
+      +sm
+        padding-bottom: 5px
+        padding-top: 5px
+        height: 80px
+      +xs
+        height: 60px
     #{$this}__bottom
       display: none
     #{$this}__nav
       display: none
     #{$this}__contacts
       +flex()
+      +lg
+        display: none        
+    #{$this}__burger
+      display: none
+    #{$this}__burger-contacts
+      +lg
+        +flex(center, center, column)
   &__contacts
     display: none
+    +lg
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      background-color: $c-heading
+      padding-left: 15px
+      padding-right: 15px
   &__logo
     +flex(flex-start, center)
     padding-top: 10px
     padding-bottom: 10px
+    +lg
+      flex-grow: 1
   &__top
     border-bottom: 1px solid  #b5d0ff
     +flex(space-between)
+    position: relative
   &__nav
     flex-grow: 1
     height: auto
     text-align: right
     padding-right: 20px
     +flex(flex-end, center)
+    +lg
+      display: none
+      position: absolute
+      top: 100%
+      width: 100%
+      left: 0
+      z-index: 10      
+      text-align: center
+      background-color: $c-heading
+      padding-right: 0
+      padding-top: 15px
+      padding-bottom: 15px
   &__btn
     +flex(flex-start, center)
+    +lg
+      margin-right: 10px
+    +sm
+      display: none
   &__bottom
     padding-top: 20px
+  &__burger
+    display: none
+    +lg
+      +flex(center, center, column)
+  &__burger-contacts
+    display: none
+    
 
 .phones
-  +flex(space-between, center)
+  +flex(space-between, center, row, wrap)
+  +md
+    justify-content: flex-start
 
 .phone
   +flex(flex-start, center)
@@ -49,12 +103,19 @@
   +tr(color .3s)
   +hover
     color: $accent
+  +md
+    width: 33.33333%
+  +sm
+    width: 50%
   .icon
     margin-right: 5px
     font-size: .8em
   &--lg
     font-size: $fz-lg
-    .icon
+    +sm
+      font-size: 21px
+    +xs
+      justify-content: center
   &--sm
     .phone__icon
       display: inline-block
@@ -67,4 +128,51 @@
     @extend .phone--sm
     .phone__icon
       margin-right: 0
+  &--blue
+    color: $c-heading
+
+.burger
+  display: block
+  width: 28px
+  height: 28px
+  // margin-top: 14px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $white
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.is-active span 
+    background-color: transparent
+
+  &.is-active span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.is-active span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+  &--contacts
+    border-radius: 50%
+    background-color: $accent
+    +flex(center, center)
+    width: 50px
+    height: 50px
+    color: $c-heading
 

@@ -5,13 +5,14 @@
 .route-item
   $this: &
   // padding-top: 100%
-  @extend .col-4
+  @extend .col-lg-4
+  @extend .col-md-6
   margin-bottom: 15px
   &__inner
     position: relative
     +cover
+    background-position: 50% 0%
     color: $white
-    // height: 100%
     padding-top: 100%
     border-radius: 20px
     +before
@@ -19,29 +20,50 @@
       +coverdiv
       z-index: 0
       background-image: linear-gradient( 48deg, rgb(30,94,144) 0%, rgba(255,255,255,0) 100%)
+    +sm
+      padding-top: 50% !important
+      background-position: 50% 50%
+    +xs
+      padding-top: 60% !important
   &__block
     position: absolute
     bottom: 25px
     left: 25px
     z-index: 1
+    +xs
+      bottom: 10px
+      left: 10px
   &__title
     margin-bottom: 12px
+    +sm
+      margin-bottom: 5px
   &__subttl
     margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
 
   &--lg-vertical
     #{$this}__inner
       padding-top: 200%
+      +md
+        padding-top: 100%
 
   &--lg-horisontal
-    @extend .col-8 
+    @extend .col-lg-8
+    @extend .col-md-6
     
     #{$this}__inner
       padding-top: 48%
+      +md
+        padding-top: 100%
     &.route-item--top-offset
       #{$this}__inner
         padding-top: 46%
+        +md
+          padding-top: 100%
   &--top-offset
     margin-top: -30.8%
+    +md
+      margin-top: 0
   &--left-offset
-    @extend .offset-4
+    @extend .offset-lg-4

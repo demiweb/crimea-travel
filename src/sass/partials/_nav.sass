@@ -8,6 +8,11 @@
     height: 100%
     +notlast
       margin-right: 45px
+    +lg
+      display: block
+      +notlast
+        margin-right: 0
+        margin-bottom: 10px
   a
     display: flex
     align-items: center
@@ -19,6 +24,8 @@
     +hover
       color: $accent
       border-bottom: 2px solid  $accent
+    +lg
+      display: inline
 
   &--footer
     color: $c-text
