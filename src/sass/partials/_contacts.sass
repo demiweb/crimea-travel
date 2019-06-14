@@ -4,8 +4,20 @@
   &__list
     width: 50%
   &__item
-    margin-bottom: 20px
+    +notlast
+      margin-bottom: 20px
 
   &--sm
     #{$this}__list
       width: auto
+  &--header
+    color: $white
+    +flex(space-between, center)
+    #{$this}__title
+      margin-right: 30px
+    #{$this}__item
+      +notlast
+        margin-bottom: 5px
+    #{$this}__list
+      +notlast
+        margin-right: 30px

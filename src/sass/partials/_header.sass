@@ -1,4 +1,26 @@
 .header
+  $this: &
+  &.is-fixed
+    position: fixed
+    z-index: 10
+    left: 0
+    right: 0
+    top: 0
+    background-color: $c-heading
+    height: 118px
+    #{$this}__top
+      @extend .container
+      border-bottom: 0
+      padding-top: 15px
+      padding-bottom: 15px
+    #{$this}__bottom
+      display: none
+    #{$this}__nav
+      display: none
+    #{$this}__contacts
+      +flex()
+  &__contacts
+    display: none
   &__logo
     +flex(flex-start, center)
     padding-top: 10px
@@ -41,4 +63,8 @@
       text-align: center
       .icon
         margin: 0
+  &--xs
+    @extend .phone--sm
+    .phone__icon
+      margin-right: 0
 

@@ -12,11 +12,12 @@
             name = 'nav nav--footer',
             modifications = { wrap: '', item: '', link: '' },
             list = [
-              { link: 'Главная' },
-              { link: 'Маршруты и тарифы' },
-              { link: 'Преимущества' },
-              { link: 'Вопросы и ответы' },
-              { link: 'Контакты' }
+              { link: 'Главная', href: 'hero', modLink: 'js-scroll-to-btn' },
+              { link: 'Маршруты и тарифы', href: 'routes', modLink: 'js-scroll-to-btn' },
+              { link: 'Преимущества', href: 'features', modLink: 'js-scroll-to-btn' },
+              { link: 'Вопросы и ответы', href: 'faq', modLink: 'js-scroll-to-btn' },
+              { link: 'Контакты', href: 'form', modLink: 'js-scroll-to-btn' }
+
             ]
           ) }}
         </div>
@@ -90,7 +91,8 @@
         <div class="footer__btn">
           {{ mixins.btn(
             title = 'Забронировать место',
-            mod = 'btn--transp-text'
+            mod = 'btn--transp-text js-scroll-to-btn',
+            href = 'form'
           ) }}
         </div>       
       </div>

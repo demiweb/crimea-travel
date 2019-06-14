@@ -6,6 +6,8 @@ import setDatepicker from './components/setDatepicker';
 import setSelects from './components/setSelects';
 import setAccordion from './components/setAccordion';
 import setGrid from './components/setGrid';
+import scrollTo from './components/scrollTo';
+import toggleHeaderOnScroll from './components/toggleHeaderOnScroll';
 
 $(function() {
   // sayHello();
@@ -16,4 +18,6 @@ $(function() {
   setSelects();
   setAccordion();
   setGrid();
+  scrollTo();
+  toggleHeaderOnScroll();
 });

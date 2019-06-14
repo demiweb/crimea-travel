@@ -67,9 +67,11 @@
     "run-sequence": "^2.2.1",
     "select-custom": "^1.0.6",
     "slick-carousel": "^1.8.1",
+    "throttle-debounce": "^2.1.0",
     "vinyl-buffer": "^1.0.0",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-glsl-loader": "^1.0.1"
-  }
+  },
+  "dependencies": {}
 }

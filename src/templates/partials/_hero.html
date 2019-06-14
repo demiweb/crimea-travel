@@ -8,7 +8,7 @@ meta = [
 %}
 
 <!-- begin hero -->
-<section class="hero js-lazy" data-background-image="img/bg-hero.jpg">
+<section class="hero js-lazy" data-background-image="img/bg-hero.jpg" data-scroll-to-target="hero">
   <div class="container">
     {% include "partials/_header.html" %}
 
@@ -24,7 +24,8 @@ meta = [
             <div class="hero__btn">
               {{ mixins.btn(
                 title = 'Забронировать место',
-                mod = 'js-scroll-to-btn'
+                mod = 'js-scroll-to-btn',
+                href = 'form'
               ) }}
             </div>
           </div>
