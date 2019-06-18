@@ -7,18 +7,11 @@ export default function scrollTo() {
     e.preventDefault();
     const id = $(e.currentTarget).attr('href');
     const $target = $(`[data-scroll-to-target="${id}"]`);
-    let OFFSET = 118;
-    let $menu, $burger;
+    let OFFSET = 118; // fixed header height
 
-    $menu = $(e.currentTarget).closest('.js-menu');
+    const $menu = $(e.currentTarget).closest('.js-menu');
     const name = $menu.data('menu');
-    $burger = $(`.js-burger[data-menu-target="${name}"]`);
-
-    // if (window.matchMedia('(max-width: 1199px)').matches) {
-      
-      
-      
-    // };
+    const $burger = $(`.js-burger[data-menu-target="${name}"]`);
 
     if (window.matchMedia('(max-width: 767px)').matches) {
       OFFSET = 80;
@@ -29,8 +22,12 @@ export default function scrollTo() {
 
     console.log({$menu, $burger});
 
-    $menu.slideUp();
-    $burger.removeClass(ACTIVE);
+    if (window.matchMedia('(max-width: 1199px)').matches) {
+      if($menu.length > 0 && $burger.length > 0) {
+        $menu.slideUp();
+        $burger.removeClass(ACTIVE);
+      };      
+    };
 
     $HTMLBODY.animate({
       scrollTop: $target.offset().top - OFFSET

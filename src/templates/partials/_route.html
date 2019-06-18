@@ -34,7 +34,8 @@ items = [
               <div class="route-item__btn">
                 {{ mixins.btn(
                   title = 'Смотреть график и цены',
-                  mod = 'btn--transp-white'
+                  mod = 'btn--transp-white js-popup-open',
+                  attributes = { 'data-popup-target': 'schedule' }
                 ) }}
               </div>
             </div>
