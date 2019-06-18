@@ -11,6 +11,10 @@ import toggleHeaderOnScroll from './components/toggleHeaderOnScroll';
 import setPopup from './components/setPopup';
 import toggleMenu from './components/toggleMenu';
 
+import setTelInput from './components/setTelInput';
+
+
+
 $(function() {
   // sayHello();
   setTouchClassName();
@@ -24,4 +28,6 @@ $(function() {
   toggleHeaderOnScroll();
   setPopup();
   toggleMenu();
+
+  setTelInput();
 });
