@@ -3,13 +3,15 @@
   <div class="chat-btns__btn">
     {{ mixins.btn(
       title = mixins.icon('viber-logo') + 'Чат в Viber',
-      mod = 'btn--soc btn--viber'
+      mod = 'btn--soc btn--viber',
+      href = 'viber://chat?number=380679996897'
     ) }}
   </div>
   <div class="chat-btns__btn">
     {{ mixins.btn(
       title = mixins.icon('whatsapp') + 'Чат в WhatsApp',
-      mod = 'btn--soc btn--whatsapp'
+      mod = 'btn--soc btn--whatsapp',
+      href = 'whatsapp://send?phone=380679996897'
     ) }}
   </div>
 </div>

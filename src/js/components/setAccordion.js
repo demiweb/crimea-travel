@@ -48,7 +48,18 @@ export default function setAccordion() {
     // $item.slideToggle(SLIDE_DURATION);
 
     // setTimeout(setGrid, SLIDE_DURATION);
+
     setGrid();
+
+    // const observer = new MutationObserver(mutations => {
+    //   mutations.forEach(mutation => {
+    //     if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+    //       setGrid();
+    //     };        
+    //   });
+    // });
+
+    // observer.observe($item[0], { attributes: true });
 
   };
   accordion.init();

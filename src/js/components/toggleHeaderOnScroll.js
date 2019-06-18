@@ -6,6 +6,7 @@ class Header {
     this.$header = $('.js-header');
     this.$hero = $('.hero');
     this.headerHeight = this.$header.outerHeight(true);
+    this.lastScrollTop = 0;
   };
 
   init() {
@@ -14,14 +15,27 @@ class Header {
     $WIN.on('scroll', this._toggleHeader.bind(this));
   };
 
+  show() {
+    this.$header.addClass(FIXED);
+    this.$hero.css({ paddingTop: this.headerHeight + 'px' });
+  };
+
+  hide() {
+    this.$header.removeClass(FIXED);
+    this.$hero.css({ paddingTop: '' });
+  };
+
   _toggleHeader(e) {
+    // const st = window.pageYOffset || document.documentElement.scrollTop;
+
+    // if (window.pageYOffset > this.headerHeight && st > this.lastScrollTop) {
     if (window.pageYOffset > this.headerHeight) {
-      this.$header.addClass(FIXED);
-      this.$hero.css({ paddingTop: this.headerHeight + 'px' });
+      this.show();
     } else {
-      this.$header.removeClass(FIXED);
-      this.$hero.css({ paddingTop: '' });
+      this.hide();
     };
+
+    // this.lastScrollTop = st <= 0 ? 0 : st;
   };
 };
 

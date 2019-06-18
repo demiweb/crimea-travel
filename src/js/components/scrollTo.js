@@ -10,11 +10,15 @@ export default function scrollTo() {
     let OFFSET = 118;
     let $menu, $burger;
 
-    if (window.matchMedia('(max-width: 1199px)').matches) {
-      $menu = $(e.currentTarget).closest('.js-menu');
-      const name = $menu.data('menu');
-      $burger = $(`.js-burger[data-menu-target="${name}"]`);
-    };
+    $menu = $(e.currentTarget).closest('.js-menu');
+    const name = $menu.data('menu');
+    $burger = $(`.js-burger[data-menu-target="${name}"]`);
+
+    // if (window.matchMedia('(max-width: 1199px)').matches) {
+      
+      
+      
+    // };
 
     if (window.matchMedia('(max-width: 767px)').matches) {
       OFFSET = 80;
