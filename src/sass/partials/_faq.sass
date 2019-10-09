@@ -4,8 +4,9 @@
 .question
   background-color: $white
   border-radius: $radius
-  box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.07)
-  margin-bottom: 30px
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.11)
+  border-bottom: 1px solid  $accent
+  margin-bottom: 30px  
   +sm
     margin-bottom: 15px
 
@@ -17,14 +18,14 @@
     color: $c-heading
     position: relative
     width: 100%
-    padding: 45px
+    padding: 35px
     padding-right: 65px
     +before
       +icon-arrow(8, 8, 1, currentColor, -45)
       position: absolute
       top: 50%
       transform: translate(0, -50%) rotate(-45deg)
-      right: 45px
+      right: 35px
     +lg
       padding: 25px
       padding-right: 40px
